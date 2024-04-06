@@ -1,0 +1,322 @@
+:root {
+  --color-darkest: black;
+  --color-dark-main: #333;
+  --color-light-dark: #999;
+  --color-red: #d21313;
+  --color-white: #fff;
+  --color-btn: #3f5a76;
+}
+
+/* Utilities */
+.author {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.read-time {
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0.4;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  margin: 0 150px;
+}
+
+header {
+  display: block;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+
+.top ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  left: 36%;
+}
+
+.top ul li a {
+  text-decoration: none;
+  color: var(--color-dark-main);
+  padding: .5rem;
+}
+
+.btn {
+  border-radius: 3px;
+  border: none;
+  background: var(--color-btn);
+  padding: 0.6rem;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.7rem;
+  margin: 0.4rem;
+}
+
+.logo-line {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem}
+
+.logo-line .date .now {
+  font-weight: bold;
+}
+
+.logo-line img {
+  width: 30rem;
+}
+
+.stocks {
+  display: flex;
+}
+
+.stocks p {
+  padding: 2rem;
+}
+
+.stocks .num {
+  color: #d21313;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.stocks .num i {
+  top: 2rem;
+  left: 4.5rem;
+  position: absolute;
+}
+
+header hr {
+  margin: 0.5rem 1rem;
+  opacity: 0.4;
+  color: #333;
+  background: #333;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  padding: .5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease-out;
+  z-index: 0;
+}
+
+.top-nav.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 1.5rem;
+  width: 100%;
+  /* scrolling colors */
+  background-color: var(--color-white);
+  color: var(--color-dark-main);
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: var(--color-dark-main);
+  padding: 1rem;
+}
+
+.top-nav ul li a:hover {
+  text-decoration: underline 2px;
+}
+
+.top-nav::after {
+  display: none;
+  position: absolute;
+  content: counter(li);
+  width: 100%;
+  height: 30vh;
+  background: var(--color-white);
+  z-index: -1;
+}
+
+.top-nav:hover::after {
+  display: block;
+}
+
+.top-nav i {
+  color: var(--color-light-dark);
+  margin-left: 2px;
+}
+
+
+.top-nav .vl {
+  opacity: 0.4;
+  width: 1px;
+  height: 20px;
+  background: var(--color-light-dark);
+}
+
+hr {
+  margin: 0.1rem 1rem;
+
+}
+
+/* Main content area */
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 0.1fr 1fr;
+  padding: 1rem;
+}
+
+.left-area hr {
+  margin: 1rem;
+}
+
+.israel-area {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* padding: 1rem; */
+}
+
+.israel-area img {
+  width: 95%;
+  margin-left: 10px;
+}
+
+aside .top-article img {
+  width: 100%;
+}
+
+aside hr {
+  margin: 1rem;
+}
+
+.articles * {
+  padding: 0.5rem;
+}
+
+.articles hr {
+  padding: 0;
+  opacity: 0.4;
+}
+
+.articles h2 {
+  font-size: large;
+}
+.articles h3 {
+  font-size: 1rem;
+}
+
+.main-content hr {
+  padding: 0;
+}
+
+.main-content .vl {
+  width: 1px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: var(--color-light-dark);
+  opacity: 0.3;
+}
+
+.two-small-ones {
+  display: flex;
+}
+
+.two-small-ones * {
+  margin: 0.5rem;
+}
+
+.two-small-ones img {
+  width: 100%;
+}
+
+.earthquake-area {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 10px;
+}
+
+.earthquake-vid {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.earthquake-area hr {
+  margin: 1rem;
+  opacity: 0.4;
+}
+
+#background-video {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  position: relative;
+  padding: 1rem;
+  z-index: -1;
+}
+
+.women-sports {
+  display: block;
+}
+
+.sports-tags {
+  display: flex;
+  margin-bottom: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sports-tags * {
+  margin-left: 0.8rem;
+}
+
+.sports-tags p {
+  margin-top: 0.2rem;
+  font-size: 12px;
+}
+
+.women-sports-area {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 10px;
+}
+
+.women-sports-area img {
+  width: 100%;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.eclipse img {
+  width: 100%;
+}
+
+.read-more {
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.grid-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-article img {
+  width: 100%;
+  padding: 1rem;
+}
